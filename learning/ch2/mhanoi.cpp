@@ -27,5 +27,5 @@ int main(){
     char current[]={'A','A','A','A'};
     char A='A',B='B',C='C';
     solve(current,4,A,B,C);
-    return (EXIT_SUCCESS);
+    return (1);
 }
