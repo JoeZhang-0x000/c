@@ -59,9 +59,7 @@ void listInsertionSort(Node *List,int size,int(*comp)(void*,void*)){
 int intGreater(void *x,void *y){
     return (*(int*)x-*(int*)y);
 }
-int intLess(void*x,void*y){
-    return (*(int*)y-*(int*)x);
-}
+
 void printArray(int *array,int size){
     int *p= array;
     for(int i=0;i<size;i++)
