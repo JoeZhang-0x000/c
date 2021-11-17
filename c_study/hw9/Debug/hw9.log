@@ -1,0 +1,5 @@
+﻿  源.cpp
+D:\mycode\c\hw9\源.cpp(273,20): warning C4018: “<”: 有符号/无符号不匹配
+D:\mycode\c\hw9\源.cpp(284,26): warning C4129: “.”: 不可识别的字符转义序列
+D:\mycode\c\hw9\源.cpp(302,21): warning C4018: “<”: 有符号/无符号不匹配
+  hw9.vcxproj -> D:\mycode\c\hw9\Debug\hw9.exe

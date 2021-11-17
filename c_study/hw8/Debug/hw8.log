@@ -1,0 +1,4 @@
+﻿  2019141470210_张鑫_hw8.cpp
+D:\mycode\c\hw8\2019141470210_张鑫_hw8.cpp(18,15): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+D:\mycode\c\hw8\2019141470210_张鑫_hw8.cpp(91,9): warning C4101: “k”: 未引用的局部变量
+  hw8.vcxproj -> D:\mycode\c\hw8\Debug\hw8.exe

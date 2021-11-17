@@ -1,0 +1,8 @@
+﻿  main.cpp
+D:\mycode\c\hw7\main.cpp(28,15): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+D:\mycode\c\hw7\main.cpp(91,21): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\mycode\c\hw7\main.cpp(123,36): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+D:\mycode\c\hw7\main.cpp(125,44): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\mycode\c\hw7\main.cpp(155,36): warning C4244: “+=”: 从“float”转换到“int”，可能丢失数据
+D:\mycode\c\hw7\main.cpp(157,40): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+  hw7.vcxproj -> D:\mycode\c\hw7\Debug\hw7.exe

@@ -1,0 +1,9 @@
+{
+    "cSpell.enableFiletypes": [
+        "cpp"
+    ],
+    "files.associations": {
+        "*.f90": "fortran-modern ",
+        "iostream": "cpp"
+    }
+}
