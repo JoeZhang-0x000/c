@@ -1,8 +1,0 @@
-﻿  源.cpp
-D:\mycode\c\FFT\源.cpp(34,23): warning C4244: “=”: 从“double”转换到“real”，可能丢失数据
-D:\mycode\c\FFT\源.cpp(35,20): warning C4244: “=”: 从“double”转换到“real”，可能丢失数据
-D:\mycode\c\FFT\源.cpp(60,23): warning C4244: “=”: 从“double”转换到“real”，可能丢失数据
-D:\mycode\c\FFT\源.cpp(61,23): warning C4244: “=”: 从“double”转换到“real”，可能丢失数据
-D:\mycode\c\FFT\源.cpp(82,59): warning C4244: “=”: 从“double”转换到“real”，可能丢失数据
-D:\mycode\c\FFT\源.cpp(77,11): warning C4101: “amp”: 未引用的局部变量
-  FFT.vcxproj -> D:\mycode\c\FFT\Debug\FFT.exe
