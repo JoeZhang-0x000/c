@@ -23,7 +23,7 @@ long partition(void *a,int size,int p,int r){
     return i+1;
 }
 int main(){
-    int a[] = {5,1,3,5,6,9,8,4},i,j;
+    int a[] = {3,5,1,2,3,4,6,7,3,4},i,j;
     for(int i = 0;i<sizeof(a)/sizeof(int);i++)
         cout<<a[i]<<" ";
     cout<<endl;
