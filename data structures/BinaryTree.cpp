@@ -8,14 +8,16 @@ private:
      string value;
      struct BinaryTree *lchild,*rchild;
 public:
-    BinaryTree(/* args */);
+    BinaryTree(string v);
     ~BinaryTree();
 };
 
-BinaryTree::BinaryTree(/* args */)
+BinaryTree::BinaryTree(string v)
 {
+    this->value = v;
 }
 
 BinaryTree::~BinaryTree()
 {
+    
 }
