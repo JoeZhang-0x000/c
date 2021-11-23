@@ -5,6 +5,7 @@ void swap(void *x,void *y,int size){
     memcpy(t,x,size);
     memcpy(x,y,size);
     memcpy(y,t,size);
+    free(t);
 }
 int parent(int i){
     if(i%2==1)
