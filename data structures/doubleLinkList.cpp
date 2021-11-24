@@ -9,21 +9,47 @@ typedef DoubleLink doubleLink;
 
 //初始化
 doubleLink* init(int v){
-    doubleLink *p = NULL;
+    doubleLink *head = NULL;
     doubleLink *temp = (doubleLink*)malloc(sizeof(doubleLink));
     temp->value=v;
     temp->next=NULL;
-    p=temp;
+    temp->pre=head;
+    head=temp;
+    return head;
+}
+//插入尾部
+doubleLink *insertToTail(doubleLink *p,int v){
+    doubleLink *temp=p;
+    //找到尾节点的前驱
+    while(temp->next!=NULL)
+        temp=temp->next;
+    //创建一个新的节点
+    doubleLink *t=(doubleLink*)malloc(sizeof(doubleLink));
+    t->value=v;
+    t->pre=temp;
+    t->next=temp->next;
+    temp->next=t;
     return p;
 }
 //在index处插入元素
 doubleLink *insert(doubleLink *p,int v,int index){
     doubleLink *temp = p;
-    //找到要插入的节点的前驱
-    for(int i =1;i<index-1;i++){
+    //插入位置为首节点特殊处理
+    if(index==0){
+        doubleLink *t=(doubleLink*)malloc(sizeof(doubleLink));
+        t->value=v;
+        t->next=temp;
+        t->pre=temp->pre;
+        temp->pre=t;
+        p=t;
+        return p;
+    }
+    //找到当前节点的前驱
+    for(int i=1;i<index;i++){
         temp=temp->next;
+        //若当前节点为尾节点,但是还没有找到前驱就说明不存在index
         if(!temp){
-            cout<<"插入位置无效"<<endl;
+            cout<<"不存在要插入的节点"<<index<<endl;
             return p;
         }
     }
@@ -40,19 +66,19 @@ doubleLink *insert(doubleLink *p,int v,int index){
     t->pre=temp;
     temp->next=t;
 
-    //释放内存
-    free(t);
     return p;
 }
 
 //遍历并打印链表
 void visit(doubleLink *p){
     doubleLink *temp = p;
+    if(!temp)
+        cout<<"空链表"<<endl;
 
     //当前节点的后继有节点就继续访问，并打印其value
-    while(temp->next){
-        temp=temp->next;
+    while(temp){
         cout<<temp->value<<" ";
+        temp=temp->next;
     }
     cout<<endl;
 }
@@ -81,7 +107,7 @@ doubleLink* del(doubleLink* p,int index){
     //找到需要删除节点
     for(int i=0;i<index;i++){
         temp=temp->next;
-        if(temp){
+        if(!temp){
             cout<<"需要删除的节点不存在"<<index<<endl;
             return p;
         }
@@ -97,11 +123,27 @@ doubleLink* del(doubleLink* p,int index){
     return p;
 }
 
+//销毁
+void delAll(doubleLink *p){
+    doubleLink *temp=p;
+    doubleLink *t;
+    while(temp){
+        t=temp;
+        temp=temp->next;
+        free(t);
+        visit(temp);
+    }
+}
+
 int main(){
     doubleLink *p = init(9);
     for(int i =1;i<6;i++)
-        p = insert(p,i,i);
+        p=insertToTail(p,i);
     visit(p);
+    p=insert(p,77,1);
+    visit(p);
+    delAll(p);
+    
     return 0;
 
 }
