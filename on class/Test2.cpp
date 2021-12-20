@@ -24,7 +24,7 @@ void generate(int *a,int len){
         return;
     
     for(int i=0;i<len;i++)
-        *(a+i)=rand()%9+1;
+        *(a+i)=rand()%4+1;
 }
 void printArray(int *a,int len){
     if(a==NULL)
@@ -43,21 +43,19 @@ void find(int* a,int len){
     int count[len]={0};
     int tem1,tem2,l,r,m;
     int *p;
-    l=0,r=1;
+    l=0,r=0;
     while(r<len){
-        if((*(a+l)>*(a+r))){
+        if(*(a+l)==*(a+r)){
             count[l]+=1;
             r++;
         }
         else{
             l++;
-            r=l+1;
         }
     }
-    cout<<"count:";
-    for(int i =0;i<len;i++)
-        cout<<count[i]<<" ";
-    cout<<endl;
+    // for(int i =0;i<len;i++)
+    //     cout<<count[i]<<" ";
+    // cout<<endl;
     p=count;
     m=findMax(p,len);
     // cout<<m<<endl;
